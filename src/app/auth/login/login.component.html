@@ -1,0 +1,39 @@
+<div class="container mt-3">
+    <h3>User Login</h3>
+    <div class="d-flex flex-column">
+        <form #loginForm="ngForm" (ngSubmit)="LoginSubmit(loginForm)">
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" name="email" [(ngModel)]="loginDetails.email">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" name="password"
+                            ngModel>
+                        <button mat-icon-button matSuffix (click)="hide = !hide">
+                            <mat-icon>
+                                {{ hide ? 'visibility_off':'visibility ' }}
+                            </mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div>
+                <button mat-raised-button color="accent" type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div>
+
+    <h2 class="text-center"> {{ Message }}</h2>
+</div>

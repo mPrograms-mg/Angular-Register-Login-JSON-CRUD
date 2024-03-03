@@ -1,0 +1,39 @@
+<button mat-raised-button (click)="close()" class="mb-2">Close</button>
+
+<div class="container d-flex flex-column">
+    <h1>Add Employee</h1>
+    <form [formGroup]="AddEmployee">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Name" formControlName="name">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Salary</mat-label>
+                    <input matInput placeholder="Salary" formControlName="salary">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Age</mat-label>
+                    <input matInput placeholder="Age" formControlName="age">
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div>
+            <button mat-raised-button color="accent" (click)="SubmitForm()">Submit</button>
+        </div>
+
+    </form>
+</div>
